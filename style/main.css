@@ -1,0 +1,120 @@
+body
+{
+  font-size:100%;
+  font-family:"Segoe Ui";
+  margin:0px;
+  width:100%;
+  background:url("../images/forest.png");
+  background-size:cover;
+
+}
+
+.icon
+{
+  width:48px;
+  height:48px;
+  background:#00aba9;
+  vertical-align:center;
+  -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+  -webkit-user-select: none;
+  -ms-user-select: none; /* From IE10 only */
+  user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+    -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+    user-drag: none;
+
+}
+
+.logo
+{
+  width:48px;
+  height:48px;
+  background:#00aba9;
+  vertical-align:center;
+  -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+  -webkit-user-select: none;
+  -ms-user-select: none; /* From IE10 only */
+  user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+    -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+    user-drag: none;
+
+  float:left;
+}
+
+.jump
+{
+  width:80px;
+  height:80px;
+
+
+}
+
+span.group
+{
+
+  height:80px;
+  display:block;
+  width:250px;
+  margin: 0 auto;
+
+}
+
+header
+{
+  padding-bottom:200px;
+}
+
+nav
+{
+  background:#00aba9;
+  color:#fff;
+  font-size:1.3em;
+
+}
+
+nav a
+{
+  color:#fff;
+  font-size:1.3em;
+  padding: 0px 10px;
+  font-family:"Segoe Ui Light";
+  text-decoration:none;
+  text-transform:lowercase;
+}
+
+nav span
+{
+  float:right;
+  margin-right:10px;
+  background:#00aba9;
+  padding:0px 5px;
+}
+
+#content
+{
+  width:800px;
+  margin:0 auto;
+}
+
+input[type=text]
+{
+  height:44px;
+  width:500px;
+  float:left;
+  font-size:1.2em;
+  color:#00aba9;
+  padding:0px 7px;
+}
+
+footer
+{
+  padding: 100px;
+}
+
+footer p
+{
+  text-align:center;
+  color:#C8C8C8;
+  font-size:1em;
+}
