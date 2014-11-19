@@ -6,6 +6,7 @@ body
   width:100%;
   background:url("../images/forest-patrol.jpg");
   background-size:cover;
+  background-repeat:none;
 
 }
 
