@@ -4,7 +4,7 @@ body
   font-family:"Segoe Ui";
   margin:0px;
   width:100%;
-  background:url("../images/forest-patrol.jpg");
+  background:url("../images/bg6.jpg");
   background-size:cover;
   background-repeat:none;
 
@@ -47,7 +47,7 @@ span img
 {
   width:64px;
   height:64px;
-  display:none;
+
   border-radius:100px;
 
 }
@@ -86,11 +86,11 @@ nav a
   text-transform:lowercase;
 }
 
-nav span
+nav img
 {
   float:right;
   margin-right:10px;
-  background:#00aba9;
+
   padding:0px 5px;
 }
 
@@ -126,4 +126,5 @@ footer p
   text-align:center;
   color:#C8C8C8;
   font-size:1em;
+  background:rgba(0, 0, 0, 0.3)
 }
