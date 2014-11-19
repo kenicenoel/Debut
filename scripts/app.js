@@ -22,21 +22,20 @@ $(document).ready(function()
 
       $("#faves").click(function()  //when the heart icon is clicked
       {
-        var url="opera://bookmarks";
+        var iurl="chrome://bookmarks";
 
-        window.location.replace(url);
+      chrome.tabs.update(null, {url:iurl});
       });
 
         $("#download").click(function() //when the downloads icon is clicked
         {
-          var url="opera://downloads/";
-          var query="#";
-          window.open(url+query);
+          var iurl="chrome://downloads/";
+          chrome.tabs.update(null, {url:iurl});
         });
 
-      $("#speeddial").click(function()  //when the dial icon is clicked
+      $("#store").click(function()  //when the dial icon is clicked
       {
-        var url="opera://startpage";
-        window.location.replace(url);
+        var iurl="https://chrome.google.com/webstore/category/extensions?hl=en-US";
+        chrome.tabs.update(null, {url:iurl});
       });
    });
