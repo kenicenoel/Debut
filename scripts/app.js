@@ -5,8 +5,8 @@ $(document).ready(function()
         var keypress = event.which;
         if(keypress == 13)
           {
-            var query=$("#google").val();
-            var url="http://google.com/search?q=";
+            var query=$("#search").val();
+            var url="http://bing.com/search?q=";
             window.location.replace(url+query);
           }
       });
@@ -15,8 +15,8 @@ $(document).ready(function()
 
       $("#icon").click(function() // when the search button is clicked
       {
-        var query=$("#google").val();
-        var url="http://google.com/search?q=";
+        var query=$("#search").val();
+        var url="http://bing.com/search?q=";
         window.location.replace(url+query);
       });
 
