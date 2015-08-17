@@ -10,7 +10,7 @@
   <body>
     <header>
       <nav>
-        <img src="images/icon48.png">
+        <img id="debutIcon" src="images/debut48.png">
 
       </nav>
 
@@ -20,23 +20,21 @@
 
 
       <span class="group">
-        <img id="faves" src="images/Heart.png" alt="bookmarks icon">
-        <img id="download" src="images/Arrow-Down.png" alt="download icon">
-        <img id="store" src="images/Chrome.png" alt="store icon">
+        <img class="tasks" id="faves" src="images/faves/Bookmark.png" alt="bookmarks icon">
+        <img class="tasks" id="download" src="images/faves/Download.png" alt="download icon">
+        <img class="tasks" id="store" src="images/faves/Puzzle.png" alt="store icon">
       </span>
 
 
       <div id="content">
-        <img class="logo" src="images/Network.png" alt="search logo">
-        <input id="search" type="text" placeholder="search with Bing">
+        <img id="searchIcon" class="logo" src="images/bing.png" alt="search logo">
+        <input id="search" autofocus type="text" placeholder="search with Bing">
         <img id="icon" src="images/Search.png" alt="search icon" onclick=search()>
       </div>
     </main>
 
     <footer>
-      <p>
-        Debut: a more personal start page.
-      </p>
+      <p id="footer">Debut: A more personal startpage</p>
     </footer>
 
   <script src="scripts/jquery.js"></script>
