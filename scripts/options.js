@@ -15,6 +15,7 @@ $(document).ready(function()
 
 
         var src;
+        var email;
         var searchEngine;
         var footerText;
 
@@ -34,11 +35,13 @@ $(document).ready(function()
       $("#save").click(function() // when the save button is clicked
       {
 
-        searchEngine = $('select').val();
+        searchEngine = $('#search').val();
+        email = $('#mail').val();
         footerText = $('#footerText').val();
 
 
         chrome.storage.sync.set({'searchEngine': searchEngine});
+        chrome.storage.sync.set({'mail': email});
         chrome.storage.sync.set({'footerText': footerText});
         chrome.storage.sync.set({'backgroundSrc': src});
 

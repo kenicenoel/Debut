@@ -3,8 +3,16 @@ $(document).ready(function()
   var src;
   var url="http://bing.com/search?q=";
   var engine;
+  var provider;
+  var murl = "http://outlook.com/";
   var placeholderText;
   var text;
+
+  // Make images not rightclickable
+  $('img').bind('contextmenu', function(e)
+  {
+    return false;
+});
 
   // Load the user saved background, footer text and search engine
   chrome.storage.sync.get('backgroundSrc', function(options)
@@ -63,6 +71,39 @@ $(document).ready(function()
 
               });
 
+
+              chrome.storage.sync.get('mail', function(options)
+                    {
+
+                          if(options.mail)
+                          {
+
+                            provider= options.mail;
+                            if(provider == "outlook")
+                            {
+                              murl="http://outlook.com/";
+
+                            }
+
+                            else if (provider == "gmail")
+                            {
+                              murl="http://mail.google.com/";
+
+                            }
+
+
+                            else if (provider == "yahoo")
+                            {
+                              murl="http://mail.yahoo.com/";
+
+                            }
+
+
+
+                         }
+
+                    });
+
               chrome.storage.sync.get('footerText', function(options)
                     {
 
@@ -105,6 +146,13 @@ $(document).ready(function()
         window.location.replace(url+query);
       });
 
+      $("#mail").click(function()  //when the mail icon is clicked
+      {
+        var iurl=url;
+
+      chrome.tabs.update(null, {url:iurl});
+      });
+
       $("#faves").click(function()  //when the heart icon is clicked
       {
         var iurl="chrome://bookmarks";
@@ -127,7 +175,7 @@ $(document).ready(function()
 
 
 
-      $("#debutIcon").click(function() //when the arrow icon is clicked
+      $("#settings").click(function() //when the arrow icon is clicked
       {
           chrome.tabs.create({url:'options.html'});
       });

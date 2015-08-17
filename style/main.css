@@ -119,10 +119,10 @@ nav img
   margin:0 auto;
 }
 
-.tasks:hover
+.tasks:hover, #settings:hover
 {
   cursor: pointer;
-  background-color: rgba(128, 166, 8, 0.43);
+  background-color: rgba(66, 8, 82, 0.57);
 }
 
 #options
