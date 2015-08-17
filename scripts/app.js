@@ -148,7 +148,7 @@ $(document).ready(function()
 
       $("#mail").click(function()  //when the mail icon is clicked
       {
-        var iurl=url;
+        var iurl=murl;
 
       chrome.tabs.update(null, {url:iurl});
       });
