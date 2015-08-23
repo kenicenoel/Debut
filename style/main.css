@@ -12,7 +12,7 @@ body
   font-family:"Segoe Ui";
   margin:0px;
   width:100%;
-  background:url("../images/bg6.jpg");
+  background:url("../images/bg1.jpg");
   background-size:cover;
   background-repeat:none;
 
@@ -69,6 +69,8 @@ span.group
   margin: 0 auto;
 
 }
+
+
 
 header
 {
@@ -158,7 +160,7 @@ label
 #options >select, #options >input[type=text]
 {
   height:44px;
-  width:300px;
+  width:350px;
   margin-bottom: 10px;
   font-size:1.2em;
   color:#00aba9;
@@ -203,9 +205,9 @@ button:hover
 #message
 {
 
-  font-size: 14pt;
+  font-size: 10pt;
   background-color: rgb(54, 106, 180);
-  visibility: hidden;
+  visibility: visible;
   padding-left: 15px;
   color: #fff;
 }

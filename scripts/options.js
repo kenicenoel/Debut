@@ -8,10 +8,14 @@ $(document).ready(function()
 
                 var src= options.backgroundSrc;
                 $('body').css('background','url('+src+')');
+                $('body').css('background-size','cover');
 
              }
 
         });
+
+
+
 
 
         var src;
@@ -20,11 +24,55 @@ $(document).ready(function()
         var footerText;
 
 
+
+// Check if there are preset values for the search engine, mail and footer and if so
+// make the values of the declared variables above equal to that incase the user makes no changes and hits save
+        chrome.storage.sync.get('searchEngine', function(options)
+              {
+
+                    if(options.searchEngine)
+                    {
+
+                      searchEngine= options.searchEngine;
+
+
+                   }
+
+              });
+
+
+              chrome.storage.sync.get('mail', function(options)
+                    {
+
+                          if(options.mail)
+                          {
+
+                            email= options.mail;
+
+
+                         }
+
+                    });
+
+                    chrome.storage.sync.get('footerText', function(options)
+                          {
+
+                                if(options.footerText)
+                                {
+
+                                  footerText= options.footerText;
+
+
+                               }
+
+                          });
+
+
       // These functions are run when the items on the startpage are clicked
 
       $(".thumbnail").click(function() // when the images are clicked
       {
-        $('#message').css('visibility','hidden');
+        // $('#message').css('visibility','hidden');
         src= $(this).attr('src');
         $('body').css('background','url("'+src+'")');
         $('body').css('background-size','cover');
@@ -35,9 +83,23 @@ $(document).ready(function()
       $("#save").click(function() // when the save button is clicked
       {
 
-        searchEngine = $('#search').val();
-        email = $('#mail').val();
-        footerText = $('#footerText').val();
+        if($('#search').val() != null)
+        {
+          searchEngine = $('#search').val();
+        }
+
+        if($('#mail').val() != null)
+        {
+          email = $('#mail').val();
+        }
+
+        if($('#footerText').val() != "")
+        {
+          footerText = $('#footerText').val();
+        }
+
+
+
 
 
         chrome.storage.sync.set({'searchEngine': searchEngine});
@@ -45,13 +107,12 @@ $(document).ready(function()
         chrome.storage.sync.set({'footerText': footerText});
         chrome.storage.sync.set({'backgroundSrc': src});
 
-        $('#message').css('visibility','visible');
+          // $('#message').css('visibility','visible');
+
+        var iurl="startpage.html";
+        // chrome.tabs.update(null, {url:iurl});
+        window.location.replace(iurl);
 
       });
-
-
-
-
-
 
    });

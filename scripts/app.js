@@ -82,12 +82,14 @@ $(document).ready(function()
                             if(provider == "outlook")
                             {
                               murl="http://outlook.com/";
+                              $('#mail').data('powertip', 'Outlook');
 
                             }
 
                             else if (provider == "gmail")
                             {
                               murl="http://mail.google.com/";
+                              $('#mail').data('powertip', 'Gmail');
 
                             }
 
@@ -95,6 +97,7 @@ $(document).ready(function()
                             else if (provider == "yahoo")
                             {
                               murl="http://mail.yahoo.com/";
+                              $('#mail').data('powertip', 'Yahoo Mail');
 
                             }
 
@@ -177,10 +180,25 @@ $(document).ready(function()
 
       $("#settings").click(function() //when the arrow icon is clicked
       {
-          chrome.tabs.create({url:'options.html'});
+        var iurl="options.html";
+        chrome.tabs.update(null, {url:iurl});
+        //chrome.tabs.create({url:'options.html'});
       });
 
 
+// Uses the jQuery powerTip plugin
+
+      $('.tasks').powerTip
+      ({
+	        placement: 'n' // north tooltip position
+
+      });
+
+
+            $('#settings').powerTip
+            ({
+      	        placement: 'w' // west tooltip position
+            });
 
 
 
