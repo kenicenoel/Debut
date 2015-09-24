@@ -1,5 +1,11 @@
 $(document).ready(function()
 {
+
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+  {
+    chrome.pageAction.show(tabs[0].id);
+  });
+
   var src;
   var url="http://bing.com/search?q=";
   var engine;
@@ -82,14 +88,14 @@ $(document).ready(function()
                             if(provider == "outlook")
                             {
                               murl="http://outlook.com/";
-                              $('#mail').data('powertip', 'Outlook');
+                              $('#mail').data('hint', 'Outlook');
 
                             }
 
                             else if (provider == "gmail")
                             {
                               murl="http://mail.google.com/";
-                              $('#mail').data('powertip', 'Gmail');
+                              $('#mail').data('hint', 'Gmail');
 
                             }
 
@@ -97,7 +103,7 @@ $(document).ready(function()
                             else if (provider == "yahoo")
                             {
                               murl="http://mail.yahoo.com/";
-                              $('#mail').data('powertip', 'Yahoo Mail');
+                              $('#mail').data('hint', 'Yahoo Mail');
 
                             }
 
@@ -195,21 +201,6 @@ $(document).ready(function()
       {
           $(this).css({'background-color' : 'rgba(227, 227, 217, 0.68)'});
       });
-
-
-// Uses the jQuery powerTip plugin
-
-      $('.tasks').powerTip
-      ({
-	        placement: 'n' // north tooltip position
-
-      });
-
-
-            $('#settings').powerTip
-            ({
-      	        placement: 'w' // west tooltip position
-            });
 
 
 

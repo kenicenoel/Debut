@@ -13,11 +13,6 @@ $(document).ready(function()
              }
 
         });
-
-
-
-
-
         var src;
         var email;
         var searchEngine;
@@ -71,8 +66,7 @@ $(document).ready(function()
                           });
 
 
-      // These functions are run when the items on the startpage are clicked
-
+      // when the thumnail image is clicked
       $(".thumbnail").click(function() // when the images are clicked
       {
         // $('#message').css('visibility','hidden');
@@ -83,6 +77,7 @@ $(document).ready(function()
         $(this).css('border','2px solid rgb(251, 105, 162)');
       });
 
+      // when the save button is clicked
       $("#save").click(function() // when the save button is clicked
       {
 
@@ -104,17 +99,47 @@ $(document).ready(function()
 
 
 
-
+        // set the updated options
         chrome.storage.sync.set({'searchEngine': searchEngine});
         chrome.storage.sync.set({'mail': email});
         chrome.storage.sync.set({'footerText': footerText});
         chrome.storage.sync.set({'backgroundSrc': src});
 
-          // $('#message').css('visibility','visible');
+
+
+        // setup the notification object
+          var options =
+          {
+            type: "basic",
+            title: "Hey there,",
+            message: "Your settings have been successfully saved!",
+            iconUrl: "images/icon128.png"
+          }
+
+
+          // Check to see if a notification exits
+          chrome.notifications.getAll(function (alerts)
+          {
+            var id="info";
+            for(id in alerts)
+            {
+              // Clear notification if it already exists
+              chrome.notifications.clear(id, function () {});
+            }
+          });
+
+          // create a notification
+          chrome.notifications.create('info', options, function () {} );
+
+
 
         var iurl="startpage.html";
+
         // chrome.tabs.update(null, {url:iurl});
         window.location.replace(iurl);
+
+
+
 
       });
 

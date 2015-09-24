@@ -31,9 +31,8 @@ body
 {
   font-size:100%;
   font-family:"Segoe Ui";
-  margin:0px;
-  width:100%;
-  background:url("../images/bg1.jpg");
+  /*width:100%;*/
+  background:url("../images/bg5.jpg");
   background-size:cover;
   background-repeat:no-repeat;
 
@@ -87,6 +86,13 @@ span img
 
 }
 
+span.group > span > img
+{
+  width: 28px;
+  height: 28px;
+  padding: 0px 5px;
+}
+
 a
 {
   color: #fff;
@@ -97,23 +103,17 @@ a
 span.group
 {
 
-  height:auto;
+  height:30px;
   display: block;
   padding:0px 20px 0px 15px;
   background-color: rgba(14, 14, 14, 0.26);
-  width:186px;
-  border-radius: 10px;
+  width:169px;
+  border-radius: 5px;
   margin: 0px auto;
 
 }
 
-#settings
-{
-  background-color: rgba(14, 14, 14, 0.16);
-  border-radius: 10px;
-  height: 32px;
-  width: 32px;
-}
+
 
 span.author
 {
@@ -166,25 +166,45 @@ nav img
   padding:0px 5px;
 }
 
-#content
-{
-  width:800px;
-  padding-top:20px;
-  margin:0 auto;
-}
 
-.tasks:hover, #settings:hover
+span.group > span > img:hover, #settings:hover
 {
   cursor: pointer;
-  background-color: rgba(41, 130, 47, 0.16);
+  padding: 0px 5px;
+  background-color: rgba(222, 79, 34, 0.26);
+}
+
+span#customize
+{
+  float: right;
+}
+
+nav > span > img
+{
+
+  background-color: rgba(14, 14, 14, 0.26);
+  border-radius: 10px;
+  height: 30px;
+  width: 30px;
 }
 
 #options
 {
   padding-left: 20px;
   background-color: #fff;
+  margin: 0 auto;
 
 }
+
+#content
+{
+  width:800px;
+  height: 100px;
+  padding-top:20px;
+  margin:0 auto;
+
+}
+
 
 input[type=text]
 {
@@ -200,11 +220,12 @@ input[type=text]
 
 #search
 {
-  background-color: rgba(227, 227, 217, 0.78);
+  background-color: rgba(227, 227, 217, 0.58);
   border: 1px solid rgba(70, 75, 75, 0.26);
   background-image: url("../images/Search2.png");
   background-position: right;
   background-repeat: no-repeat;
+  /*margin:0 auto;*/
 }
 
 
@@ -227,7 +248,7 @@ label#selectBackground
   display: block;
 }
 
-#options >select, #options >input[type=text]
+#options > select, #options >input[type=text]
 {
   height:44px;
   width:350px;
@@ -276,9 +297,10 @@ button:hover
 {
 
   font-size: 10pt;
+  /*margin: 0 auto;*/
+  /*width: 800px;*/
   background-color: rgb(54, 106, 180);
-  visibility: visible;
-  padding-left: 15px;
+  /*padding-left: 15px;*/
   color: #fff;
 }
 

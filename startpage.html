@@ -3,7 +3,8 @@
   <head>
     <title>Debut</title>
     <link rel="stylesheet" type="text/css" href="style/main.css">
-    <link rel="stylesheet" type="text/css" href="style/jquery.powertip.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style/jquery.powertip.min.css"> -->
+    <link rel="stylesheet" href="style/hint.min.css">
 
 
   </head>
@@ -11,7 +12,7 @@
   <body>
     <header>
       <nav>
-        <img id="settings" data-powertip="Settings" src="images/settings.png">
+        <span id="customize" class="hint--left" data-hint="Customize"><img id="settings" src="images/settings.png"></span>
 
       </nav>
 
@@ -21,28 +22,26 @@
 
 
       <span class="group">
-
-        <img class="tasks" data-powertip="Mail" id="mail" src="images/faves/Message.png" alt="mail icon">
-        <img class="tasks" data-powertip="Bookmarks" id="faves" src="images/faves/Bookmark.png" alt="bookmarks icon">
-        <img class="tasks" data-powertip="Downloads" id="download" src="images/faves/Download.png" alt="download icon">
-        <img class="tasks" data-powertip="Chrome Webstore" id="store" src="images/faves/Puzzle.png" alt="store icon">
+        <span id="mail" class="hint--top" data-hint="Mail"> <img  src="images/faves/Message.png" alt="mail icon"></span>
+        <span id="faves" class="hint--top" data-hint="Bookmarks"> <img  src="images/faves/Bookmark.png" alt="bookmarks icon"></span>
+        <span id="download" class="hint--top" data-hint="Downloads"> <img  src="images/faves/Download.png" alt="download icon"></span>
+        <span id="store" class="hint--top" data-hint="Chrome Webstore"> <img  src="images/faves/Puzzle.png" alt="store icon"></span>
       </span>
 
 
       <div id="content">
         <img id="searchIcon" class="logo" src="images/bing.png" alt="search logo">
         <input id="search" autofocus type="text" placeholder="Search with Bing">
-        <!-- <img id="icon" src="images/Search.png" alt="search icon"> -->
+
       </div>
     </main>
 
     <footer>
-      <p id="footer">Debut: A more personal startpage</p>
+      <p id="footer">Debut</p>
     </footer>
 
   <script src="scripts/jquery.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/jquery.powertip.min.js"></script>
   </body>
 
 

@@ -1,13 +1,20 @@
 {
   "name": "Debut",
-  "description": "A modern and customizable personal start page for your browser",
-  "version": "1.15.9.7",
+  "description": "A customizable and modern newtab page for your browser",
+  "version": "1.15.9.19",
   "author": "Kenice Noel",
   "incognito": "spanning",
-  "permissions": ["tabs", "storage"],
+  "permissions": ["tabs", "storage", "notifications"],
   "chrome_url_overrides":
   {
     "newtab": "startpage.html"
+
+  },
+
+  "page_action":
+  {
+    "default_icon": "images/icon48.png",
+    "default_title": "Debut"
 
   },
 
